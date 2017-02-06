@@ -11,7 +11,7 @@ namespace RepNedarvning
         public int BilPrisExAfgift { get; set; }
         public int BuyYear { get; set; }
         public string Brand { get; set; }
-        public string RegNr { get; set; }
+        private string RegNr { get; set; }
         public int KmPl { get; set; }
 
         public Bil(int BilPris, int BuyYear, string Brand, string RegNr, int KmPl)
@@ -57,7 +57,7 @@ namespace RepNedarvning
             return BilPrisExAfgift;
         }
 
-        public int HalfYear()
+        public virtual int HalfYear()
         {
             return 1000;
         }

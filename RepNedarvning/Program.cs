@@ -10,6 +10,9 @@ namespace RepNedarvning
     {
         static void Main(string[] args)
         {
+            List<DieselBil> DBilliste = new List<DieselBil>();
+
+            
         }
     }
 }
