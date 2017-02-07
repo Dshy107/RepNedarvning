@@ -11,7 +11,7 @@ namespace RepNedarvning
         public int BilPrisExAfgift { get; set; }
         public int BuyYear { get; set; }
         public string Brand { get; set; }
-        private string RegNr { get; set; }
+        public string RegNr { get; private set; }
         public int KmPl { get; set; }
 
         public Bil(int BilPris, int BuyYear, string Brand, string RegNr, int KmPl)
