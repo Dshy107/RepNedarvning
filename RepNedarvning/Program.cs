@@ -24,7 +24,7 @@ namespace RepNedarvning
                 Console.WriteLine(bil.ToString(), bil.HalfYear());
 
             }
-
+            Console.ReadLine();
         }
     }
 }

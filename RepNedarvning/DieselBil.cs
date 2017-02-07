@@ -33,9 +33,9 @@ namespace RepNedarvning
         {
             if (Partikelfilter!= true)
             {
-                return base.HalfYear() + 500;
+                return 1000 + 500;
             }
-            return base.HalfYear();
+            return 1000;
         }
         public override string ToString()
         {

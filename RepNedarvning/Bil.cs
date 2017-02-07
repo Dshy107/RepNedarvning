@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RepNedarvning
 {
-    public class Bil
+    public abstract class Bil
     {
         public int BilPrisExAfgift { get; set; }
         public int BuyYear { get; set; }
@@ -57,10 +57,8 @@ namespace RepNedarvning
             return BilPrisExAfgift;
         }
 
-        public virtual int HalfYear()
-        {
-            return 1000;
-        }
+        public abstract int HalfYear();
+        
       
     }
 }
