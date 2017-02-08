@@ -10,19 +10,30 @@ namespace RepNedarvning
     {
         static void Main(string[] args)
         {
-            DieselBil dieselbil = new DieselBil(200000, 2002, "Fiat", "xx99999", 20);
+            DieselBil dieselbil = new DieselBil(200000, 2002, "Fiat", "xx99999", 20, 50);
+            BenzinBil benzinbil = new BenzinBil(300000, 2012, "Lancia", "YX52345", 18, 45);
             List<DieselBil> DBilliste = new List<DieselBil>();
+            List<BenzinBil> BBilliste = new List<BenzinBil>();
             DBilliste.Add(dieselbil);
-            DBilliste.Add(new DieselBil( 260000, 2002, "Obel", "ZZ12345", 15));
-            DBilliste.Add(new DieselBil( 340000, 2005, "Audi", "ZX22345", 17));
-            DBilliste.Add(new DieselBil( 220000, 2010, "VW", "XZ32345", 20) );
-            DBilliste.Add(new DieselBil( 500000, 2012, "BMW", "YY42345", 22));
-
+            DBilliste.Add(new DieselBil( 260000, 2002, "Obel", "ZZ12345", 15, 45));
+            DBilliste.Add(new DieselBil( 340000, 2005, "Audi", "ZX22345", 17, 52));
+            DBilliste.Add(new DieselBil( 220000, 2010, "VW", "XZ32345", 20, 50));
+            DBilliste.Add(new DieselBil( 500000, 2012, "BMW", "YY42345", 22, 55));
+            BBilliste.Add(benzinbil);
+            BBilliste.Add(new BenzinBil(300000, 2012, "Lancia", "YX52345", 18, 45));
+            BBilliste.Add(new BenzinBil(300000, 2012, "Lancia", "YX52345", 18, 45));
+            BBilliste.Add(new BenzinBil(300000, 2012, "Lancia", "YX52345", 18, 45));
+            BBilliste.Add(new BenzinBil(300000, 2012, "Lancia", "YX52345", 18, 45));
+            BBilliste.Add(new BenzinBil(300000, 2012, "Lancia", "YX52345", 18, 45));
 
             foreach (var bil in DBilliste)
             {
-                Console.WriteLine(bil.ToString(), bil.HalfYear());
+                Console.WriteLine(bil.ToString(), bil.HalfYear(), bil.Range());
 
+            }
+            foreach (var bbil in BBilliste)
+            {
+                Console.WriteLine(bbil.ToString(), bbil.HalfYear(), bbil.Range());
             }
             Console.ReadLine();
         }

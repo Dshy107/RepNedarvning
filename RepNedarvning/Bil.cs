@@ -58,6 +58,8 @@ namespace RepNedarvning
         }
 
         public abstract int HalfYear();
+
+        public abstract int Range();
         
       
     }
