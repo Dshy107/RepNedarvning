@@ -12,15 +12,15 @@ namespace RepNedarvning
         public int BuyYear { get; set; }
         public string Brand { get; set; }
         public string RegNr { get; private set; }
-        public int KmPl { get; set; }
+        
 
-        public Bil(int BilPris, int BuyYear, string Brand, string RegNr, int KmPl)
+        public Bil(int BilPris, int BuyYear, string Brand, string RegNr)
         {
             this.BilPrisExAfgift = BilPrisExAfgift;
             this.BuyYear = BuyYear;
             this.Brand = Brand;
             this.RegNr = RegNr;
-            this.KmPl = KmPl;
+            
         }
 
         public virtual int RegAfgift()
@@ -28,7 +28,7 @@ namespace RepNedarvning
             int Bilpris = BilPrisExAfgift * 105 / 100;
             if (BuyYear <= 2014)
             {
-                if (Bilpris > 80500)
+                if (Bilpris <= 80500)
                 {
                     int Efterpris = Bilpris - 80500;
                     Bilpris = Bilpris - Efterpris;

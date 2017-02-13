@@ -9,9 +9,11 @@ namespace RepNedarvning
     public sealed class BenzinBil : Bil
     {
         public int Tank { get; set; }
-        public BenzinBil(int BilPris, int BuyYear, string Brand, string RegNr, int KmPl, int Tank) : base(BilPris, BuyYear, Brand, RegNr, KmPl)
+        public int KmPl { get; set; }
+        public BenzinBil(int BilPris, int BuyYear, string Brand, string RegNr, int KmPl, int Tank) : base(BilPris, BuyYear, Brand, RegNr)
         {
             this.Tank = Tank;
+            this.KmPl = KmPl;
         }
         public override int Range()
         {
@@ -46,4 +48,4 @@ namespace RepNedarvning
         }
     }
     }
-}
+

@@ -13,12 +13,14 @@ namespace RepNedarvning
         public bool Partikelfilter { get; private set; }
         public int Tank { get; set; }
         public bool pf { get; internal set; }
+        public int KmPl { get; set; }
 
-        public DieselBil(int BilPris, int BuyYear, string Brand, string RegNr, int KmPl, bool pf, int Tank) : base(BilPris, BuyYear, Brand, RegNr, KmPl)
+        public DieselBil(int BilPris, int BuyYear, string Brand, string RegNr, int KmPl, bool pf, int Tank) : base(BilPris, BuyYear, Brand, RegNr)
         {
            
             this.Partikelfilter = pf;
             this.Tank = Tank;
+            this.KmPl = KmPl;
         }
         public DieselBil(int BilPris, int BuyYear, string Brand, string RegNr, int KmPl, int Tank) : this(BilPris, BuyYear, Brand, RegNr, KmPl, true, Tank)
         {
@@ -62,7 +64,7 @@ namespace RepNedarvning
         }
         public override string ToString()
         {
-            return Brand + " " + BilPrisExAfgift + " " + BuyYear + " " + RegNr + " " + KmPl + " " + Tank;
+            return "Mærke " + Brand + "Pris " + BilPrisExAfgift + "Købsår " + BuyYear + "Registrerings Nummer " + RegNr + "Km pr l " + KmPl + "Tank størelse " + Tank;
         }
 
     }
