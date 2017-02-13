@@ -42,10 +42,10 @@ namespace RepNedarvning
             
             return 1000;
         }
-        public override string ToString()
+        public override string ToStringg()
         {
             return Brand + " " + BilPrisExAfgift + " " + BuyYear + " " + RegNr + " " + KmPl;
         }
     }
-    }
+}
 
